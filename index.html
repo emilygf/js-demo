@@ -7,7 +7,7 @@
 
     <title>Demo</title>
 
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
 
     <script src="jquery.js"></script>
@@ -24,12 +24,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">JS Demo</a>
+          <a class="navbar-brand" href="#">Project name</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">That's about it</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -38,17 +39,20 @@
     <div class="container">
 
       <div class="starter-template">
+
         <h1>Quick JS Demo</h1>
+
+        <div id="calculator">
         <p class="lead">Calculator</p>
         <form class="form-inline">
           <div class="form-group">
             <label class="sr-only" for="num1">Number 1</label>
-            <input type="number" class="form-control" class="inputNumber" id="num1" placeholder="Number 1">
+            <input type="number" min="0" step="1" class="form-control" id="num1" placeholder="Number 1">
           </div>
           <p class="btn">+</p>
           <div class="form-group">
             <label class="sr-only" for="num2">Number 2</label>
-            <input type="number" class="form-control" class="inputNumber" id="num2" placeholder="Number 2">
+            <input type="number" min="0" step="1" class="form-control" id="num2" placeholder="Number 2">
           </div>
           <p id="equals" class="btn">=</p>
           <div class="form-group">
@@ -56,12 +60,33 @@
             <input type="number" class="form-control" id="num3" placeholder="Sum">
           </div>
         </form>
+        </div>
+
+        <br>
+
+        <div id="timer">
+        <p class="lead">Timer</p>
+        <form class="form-inline">
+          <div class="form-group">
+            <label class="sr-only" for="minutes">Minutes</label>
+            <input type="number" min="0" step="1" class="form-control" id="minutes" placeholder="Minutes">
+          </div>
+        </form>
+        <br>
+        <p class="btn btn-lg btn-default"><span id="mins">0</span>:<span id="seconds">00</span></p>
+        <br>
+        <p class="lead">Enter the initial number of minutes in the text box above, and use the buttons below to control the timer.</p>
+        <p id="timer-start" class="btn btn-default">Start</p>
+        <p id="timer-pause" class="btn btn-default">Pause</p>
+        <p id="timer-reset" class="btn btn-default">Reset</p>
+        </div>
+
       </div>
 
     </div>
 
     
-    <script src="bootstrap.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
     <script src="my_js.js"></script>
   </body>
 </html>
