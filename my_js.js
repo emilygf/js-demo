@@ -43,13 +43,15 @@ $("#timer-start").on('click', function() {
 $("#timer-pause").on('click', function() {
 	$("#minutes").attr("disabled","true");
 	clearInterval(timerId);
+	$("#timer-start").html("Restart");
 });
 
 $("#timer-reset").on('click', function() {
 	$("#minutes").attr("disabled", true);
 	clearInterval(timerId);
 	document.getElementById("seconds").innerHTML = "00";
-    document.getElementById("mins").innerHTML = 0;
-    document.getElementById("minutes").value = "";
-    $("#minutes").attr("disabled", false);
+    	document.getElementById("mins").innerHTML = 0;
+    	document.getElementById("minutes").value = "";
+    	$("#minutes").attr("disabled", false);
+	$("#timer-start").html("Start");
 });
