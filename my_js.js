@@ -38,6 +38,7 @@ function myTimer() {
 $("#timer-start").on('click', function() {
 	$("#minutes").attr("disabled","true");
 	timerId = setInterval(myTimer, 1000);
+	$("#timer-start").html("Start");
 });
 
 $("#timer-pause").on('click', function() {
